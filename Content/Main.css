@@ -1,0 +1,10 @@
+﻿body {
+    background-color: gray;
+}
+
+.Block {
+   border :2px dashed black ;
+   width : 300px;
+   height : 400px;
+   margin : auto;
+}
