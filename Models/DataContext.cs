@@ -1,4 +1,5 @@
-﻿using Cars.Models.Entity;
+﻿using Cars.Models.Entities;
+using Cars.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -11,9 +12,11 @@ namespace Cars.Models
     {
         public DbSet<Car> cars { get; set; }
 
-        public DataContext()
+        public DbSet<CarCat> CarCats { get; set; }
+
+        public DataContext():base("MyConnectionString")
         {
-            Database.Connection.ConnectionString = "server=.;database=Cars;trusted_connection = true";
+            
         }
     }
 }
