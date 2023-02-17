@@ -13,7 +13,7 @@ namespace Cars.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202301271736419_Car_Mig"; }
+            get { return "202302171850071_Car_Mig"; }
         }
         
         string IMigrationMetadata.Source
