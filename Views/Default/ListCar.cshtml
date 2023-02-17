@@ -9,16 +9,17 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Main.css" rel="stylesheet" />
     <title>ListCar</title>
 </head>
 <body>
     <div class="Block">
         @foreach (var item in Model)
         {
-            <p>@item.Name  @item.Model  @item.Age </p>
+            <p>@item.Name    @item.Model  @item.Age <a href="~/Default/EditCar/@item.Id">Edit</a> |  <a href="~/Default/DeleteCar/@item.Id">Delete</a> </p>
         }
 
-        <a href="Default/AddCar">Add New Car</a>
+        <a href="~/Default/AddCar">Add New Car</a>
     </div>
 </body>
 </html>
