@@ -10,6 +10,7 @@ namespace Cars.Controllers
 {
     public class DefaultController : Controller
     {
+        DataContext context = new DataContext();
         // GET: Default
         public ActionResult Index()
         {
@@ -32,16 +33,14 @@ namespace Cars.Controllers
             return View();
         }
         [HttpPost()]
-        public ActionResult AddCar(string Name , string Model , int Age)
+        public ActionResult AddCar(string Name, string Model, int Age , int Type)
         {
-            using(DataContext context = new DataContext())
-            {
-                Car car = new Car() { Name = Name, Model = Model, Age = Age };
+            Car car = new Car() { Name = Name, Model = Model, Age = Age , Type = Type };
 
-                context.cars.Add(car);
+            context.cars.Add(car);
 
-                context.SaveChanges();
-            }
+            context.SaveChanges();
+
             return RedirectToAction("ListCar");
         }
 
@@ -49,12 +48,41 @@ namespace Cars.Controllers
         {
             List<Car> cars = new List<Car>();
 
-            using(DataContext context = new DataContext())
-            {
-                cars = context.cars.ToList();
-            }
+            cars = context.cars.ToList();
 
             return View(cars);
+        }
+
+        public ActionResult DeleteCar(int ID)
+        {
+            context.cars.Remove(context.cars.Find(ID));
+
+            context.SaveChanges();
+
+            return RedirectToAction("ListCar");
+        }
+
+        public ActionResult EditCar(int ID)
+        {
+            Car car = context.cars.Find(ID);
+
+            return View(car);
+        }
+
+        [HttpPost()]
+        public ActionResult EditCar(Car car)
+        {
+            context.Entry(car).State = System.Data.Entity.EntityState.Modified;
+
+            context.SaveChanges();
+
+            return RedirectToAction("ListCar");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+                context.Dispose();
         }
     }
 }
