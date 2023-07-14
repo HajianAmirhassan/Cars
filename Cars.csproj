@@ -95,32 +95,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Home.css" />
+    <Content Include="Content\JS\bootstrap.bundle.min.js" />
     <Content Include="Content\Main.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\CarCatController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\CarController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202301271736419_Car_Mig.cs" />
-    <Compile Include="Migrations\202301271736419_Car_Mig.designer.cs">
-      <DependentUpon>202301271736419_Car_Mig.cs</DependentUpon>
+    <Compile Include="Migrations\202302171850071_Car_Mig.cs" />
+    <Compile Include="Migrations\202302171850071_Car_Mig.designer.cs">
+      <DependentUpon>202302171850071_Car_Mig.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext.cs" />
-    <Compile Include="Models\Entity\Car.cs" />
+    <Compile Include="Models\Entities\Car.cs" />
+    <Compile Include="Models\Entities\CarCat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Areas\AdminPanel\Views\web.config" />
+    <Content Include="Areas\AdminPanel\Views\CarCat\Index.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\CarCat\AddCat.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\CarCat\EditCat.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Car\Index.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Car\AddCar.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Car\EditCar.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Shared\_DefaultLayout.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Default\AboutUs.cshtml" />
     <Content Include="Views\Default\ShowMessage.cshtml" />
     <Content Include="Views\Default\AddCar.cshtml" />
     <Content Include="Views\Default\ListCar.cshtml" />
+    <Content Include="Views\Default\EditCar.cshtml" />
+    <Content Include="Views\Shared\_HomeLayout.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\CarCat.cshtml" />
+    <Content Include="Views\Home\CarList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -130,10 +152,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\AdminPanel\Data\" />
+    <Folder Include="Upload\Car\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202301271736419_Car_Mig.resx">
-      <DependentUpon>202301271736419_Car_Mig.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202302171850071_Car_Mig.resx">
+      <DependentUpon>202302171850071_Car_Mig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

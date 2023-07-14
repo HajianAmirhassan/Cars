@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Areas",
+    "\\Areas\\AdminPanel",
+    "\\Areas\\AdminPanel\\Controllers",
+    "\\Controllers",
+    "\\Models",
+    "\\Models\\Entities"
+  ],
+  "SelectedNode": "\\Areas\\AdminPanel\\Controllers\\CarCatController.cs",
+  "PreviewInSolutionExplorer": false
+}
