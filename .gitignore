@@ -4,3 +4,11 @@
 
 bin/
 obj/Debug/
+*.config
+*.dll
+*.pdb
+*.csproj
+
+/Upload/Car
+
+
