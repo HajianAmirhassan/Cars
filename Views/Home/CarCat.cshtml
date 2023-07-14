@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Cars.Models.Entities.CarCat>
+@{
+    ViewBag.Title = "CarCat";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<h2>CarCat</h2>
+
+@foreach (var item in Model)
+{
+    <a href="~/Home/CarList/@item.id">@item.Title</a>
+    <br />
+}

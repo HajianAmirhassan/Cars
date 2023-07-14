@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Cars.Models.Entities.Car>
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <article class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="ad-item h-100 p-3">
+                    <div class="col-6 col-sm-12 p-0">
+                        <div class="ad-item-wrapper">
+                            <a href="#">
+                                <img class="img-fluid lazyload rounded" src="@item.ImageUrl">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12 p-0">
+                        <div class="d-flex flex-column justify-content-between pr-lg-0 pr-2 h-100">
+                            <div>
+                                <div class="ad-item-body mt-lg-3 mt-sm-3 mt-0">
+                                    <a href=""> <h3 class="text-site-secondary f-20">@item.Name </h3> </a>
+                                    <span class="text-muted d-block">@item.Model</span>
+                                    <span class="text-muted d-block">@item.Age Years</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        }
+    </div>
+</div>
