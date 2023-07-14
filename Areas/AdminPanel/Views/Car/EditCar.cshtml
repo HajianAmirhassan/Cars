@@ -1,0 +1,25 @@
+﻿@model Cars.Models.Entities.Car
+
+@{
+    ViewBag.Title = "Edit Car";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<div class="Block">
+    <form method="post" action="~/AdminPanel/Car/EditCar" enctype="multipart/form-data">
+        <input name="Id" type="hidden" value="@Model.Id" />
+        <p>Name :</p> <input name="Name" type="text" value="@Model.Name" />
+        <p>Model :</p> <input name="Model" type="text" value="@Model.Model" />
+        <p>Age :</p> <input name="Age" type="number" value="@Model.Age" />
+        <p>Image :</p> <input name="url" type="file" value="@Model.ImageUrl" />
+        <p>Type :</p>
+        <select name="CarCat_id">
+            @foreach (var item in ViewBag.CarCat)
+            {
+                <option value="@item.id">@item.Title</option>
+            }
+        </select>
+        <br />
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+</div>
