@@ -1,0 +1,21 @@
+﻿@model Cars.Models.Entities.CarCat
+
+@{
+    ViewBag.Title = "EditCat";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<div class="Menu">
+    <a href="#">MainPage</a> |<a href="#">Car</a> |<a href="#">CarCat</a> |
+</div>
+<div class="Block">
+    <div class="Block">
+        <form method="post" action="~/AdminPanel/CarCat/EditCat">
+            <input type="hidden" name="id" value="@Model.id" />
+            <p>Title :</p> <input name="Title" type="text" value="@Model.Title" />
+            <br />
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+    </div>
+</div>
+

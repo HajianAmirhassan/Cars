@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Cars.Models.Entities.CarCat>
+
+
+@{
+    ViewBag.Title = "ListCat";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<div class="Block">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td> |
+            <td><a href="~/AdminPanel/CarCat/DeleteCat/@item.id">Delete</a></td> |
+            <td><a href="~/AdminPanel/CarCat/EditCat/@item.id">Edit</a></td> |
+            <br />
+        </tr>
+    }
+    <a href="~/AdminPanel/CarCat/AddCat">Add Cat</a>
+</div>
