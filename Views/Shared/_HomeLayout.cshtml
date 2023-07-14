@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Home.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="Menu">
+        <a href="~/Home/Index">MainPage</a> | <a href="~/Home/CarCat">Cars</a> | <a href="">About Us</a> | <a href="~/AdminPanel/CarCat">Contact Us</a> 
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <script src="~/Content/JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
