@@ -1,5 +1,5 @@
 ﻿using Cars.Models;
-using Cars.Models.Entity;
+using Cars.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -82,7 +82,10 @@ namespace Cars.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
+            {
                 context.Dispose();
+                base.Dispose(disposing);
+            }
         }
     }
 }
