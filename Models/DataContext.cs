@@ -1,5 +1,4 @@
 ﻿using Cars.Models.Entities;
-using Cars.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
