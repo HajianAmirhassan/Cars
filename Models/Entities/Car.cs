@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace Cars.Models.Entity
+namespace Cars.Models.Entities
 {
     public class Car
     {
@@ -16,6 +16,8 @@ namespace Cars.Models.Entity
         public string Model { get; set; }
 
         public int Age { get; set; }
+
+        public string ImageUrl { get; set; }
 
         public int Type { get; set; }
 
