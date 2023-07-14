@@ -1,25 +1,20 @@
-﻿@model Cars.Models.Entity.Car
+﻿@model Cars.Models.Entities.Car
 
-<!DOCTYPE html>
+@{
+    ViewBag.Title = "Edit Car";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <link href="~/Content/Main.css" rel="stylesheet" />
-    <title>EditCar</title>
-</head>
-<body>
-    <div class="Block">
-        <form method="post" action="/Default/EditCar">
-            <p>id :</p> <input name="Id" type="hidden" value="@Model.Id" />
-            <p>Name :</p> <input name="Name" type="text" value="@Model.Name" />
-            <p>Model :</p> <input name="Model" type="text" value="@Model.Model" />
-            <p>Age :</p> <input name="Age" type="number" value="@Model.Age" />
-            <p>Type :</p> <input name="Type" type="text" value="@Model.Type" />
-            <br />
-            <br />
-            <button type="submit" value="Submit">Submit</button>
-        </form>
-    </div>
-</body>
-</html>
+<div class="Block">
+    <form method="post" action="/Default/EditCar">
+        <p>id :</p> <input name="Id" type="hidden" value="@Model.Id" />
+        <p>Name :</p> <input name="Name" type="text" value="@Model.Name" />
+        <p>Model :</p> <input name="Model" type="text" value="@Model.Model" />
+        <p>Age :</p> <input name="Age" type="number" value="@Model.Age" />
+        <p>Type :</p> <input name="Type" type="text" value="@Model.Type" />
+        <br />
+        <br />
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+</div>
+

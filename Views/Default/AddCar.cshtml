@@ -1,27 +1,18 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Add Car";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 
-<!DOCTYPE html>
+<div class="Block">
+    <form method="post" action="/Default/AddCar">
+        <p>Name :</p> <input name="Name" type="text" />
+        <p>Model :</p> <input name="Model" type="text" />
+        <p>Age :</p> <input name="Age" type="number" />
+        <p>Type :</p> <input name="Type" type="text" />
+        <br />
+        <br />
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+</div>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <link href="~/Content/Main.css" rel="stylesheet" />
-    <title>AddCar</title>
-</head>
-<body>
-    <div class="Block">
-        <form method="post" action="/Default/AddCar">
-            <p>Name :</p> <input name="Name" type="text" />
-            <p>Model :</p> <input name="Model" type="text" />
-            <p>Age :</p> <input name="Age" type="number" />
-            <p>Type :</p> <input name="Type" type="text" />
-            <br />
-            <br />
-            <button type="submit" value="Submit">Submit</button>
-        </form>
-    </div>
-</body>
-</html>

@@ -1,19 +1,10 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Messages";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 
-<!DOCTYPE html>
+<div class="Block">
+    @ViewBag.ShowMessage
+</div>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <link href="~/Content/Main.css" rel="stylesheet" />
-    <title>ShowMessage</title>
-</head>
-<body>
-    <div class="Block">
-        @ViewBag.ShowMessage
-    </div>
-</body>
-</html>
