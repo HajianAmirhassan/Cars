@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Cars.Models.Entities.Car>
 @{
     ViewBag.Title = "Home";
-    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+    Layout = "~/Views/Shared/" + ViewBag.Layout;
 }
 <div class="container">
     <div class="row">
