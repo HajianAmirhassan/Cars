@@ -14,6 +14,11 @@ namespace Cars.Controllers
     {
         // GET: Home
 
+        public HomeController()
+        {
+            ViewBag.Layout = context.Settings.First().Layout;
+        }
+
         DataContext context = new DataContext();
 
         public ActionResult Index()

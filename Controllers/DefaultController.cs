@@ -2,6 +2,7 @@
 using Cars.Models.Entities;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -33,9 +34,9 @@ namespace Cars.Controllers
             return View();
         }
         [HttpPost()]
-        public ActionResult AddCar(string Name, string Model, int Age , int Type)
+        public ActionResult AddCar(string Name, string Model, int Age, int Type)
         {
-            Car car = new Car() { Name = Name, Model = Model, Age = Age , Type = Type };
+            Car car = new Car() { Name = Name, Model = Model, Age = Age, Type = Type };
 
             context.cars.Add(car);
 
