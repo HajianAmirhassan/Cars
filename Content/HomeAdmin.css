@@ -1,0 +1,38 @@
+﻿body {
+    background-color: cornflowerblue;
+}
+
+.Block {
+    background: white;
+    border: 2px dashed black;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.Menu {
+    background-color: burlywood;
+    text-align: center;
+    height: 50px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+    .Menu a {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+.ad-item {
+    background-color: #f9f7ff;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+}
+
+.ad-item-body h3 {
+    color: #000;
+}
