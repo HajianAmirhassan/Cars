@@ -13,6 +13,8 @@ namespace Cars.Models
 
         public DbSet<CarCat> CarCats { get; set; }
 
+        public DbSet<Setting> Settings { get; set; }
+
         public DataContext():base("MyConnectionString")
         {
             
