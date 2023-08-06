@@ -1,0 +1,26 @@
+﻿@model Cars.Models.Entities.Setting
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="Block">
+    <form method="post" action="~/AdminPanel/Default/Index" enctype="multipart/form-data">
+        <input hidden="hidden" value="@Model.Id" name="id" />
+        <p>title :</p> <input name="Title" type="text" value="@Model.Title" />
+        <p>Description :</p> <input name="Description" type="text" value="@Model.Description" />
+        <p>Keyword :</p> <input name="keyword" type="text" value="@Model.Keyword" />
+        <p>Layout :</p>
+        <select name="Layout">
+            @foreach (var item in ViewBag.layout)
+            {
+                <option value="@item">@item</option>
+            }
+        </select>
+        <br />
+        <br />
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+</div>
