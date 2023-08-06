@@ -76,3 +76,4 @@ C:\Users\AmirHassan\source\repos\Cars\Cars\bin\EntityFramework.xml
 C:\Users\AmirHassan\source\repos\Cars\Cars\bin\EntityFramework.SqlServer.xml
 C:\Users\AmirHassan\source\repos\Cars\Cars\obj\Debug\Cars.Migrations.Car_Mig.resources
 C:\Users\AmirHassan\source\repos\Cars\Cars\obj\Debug\Cars.csproj.GenerateResource.cache
+C:\Users\AmirHassan\source\repos\Cars\Cars\obj\Debug\Cars.Migrations.Car_Mig1.resources
